@@ -49,7 +49,17 @@ const quizMatrix = [
             correctIndex: 2,
             // Shows the points assinged for answering correctly
             points: 10
-        } 
-]
-]
+        },
+        {
+            //Second question in "JavaScript Basics"
+            question: "What does the expression typeof [1, 2, 3] evaluate to in JavaScript?",
+            // Multiple options displayed for user to choose from
+            options: ["array", "object", "list", "undefined"],
+            // Shows where in the Array the correct answer is stored, this case it is position 1 (Object)
+            correctIndex: 1,
+            // Shows the points assinged for answering correctly
+            points: 15
+        }
+    ]
+];
 
