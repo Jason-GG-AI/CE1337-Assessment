@@ -10,10 +10,11 @@ function createPlayer(name){
 }
 
 // Players array
+let players = [];
 for(i=0; i<noPlayers; i++){
-    players = [
-    createPlayer(prompt.question("Enter name of player " + [i+1] + " "))]
-}
+    let name = prompt.question("Enter name of player " + [i+1] + " ")
+players.push(createPlayer(name))}
+
 
 
 console.log(players);
