@@ -90,22 +90,14 @@ function getRankFeedback(score) {
     let tier;
     if (score >= 40) {
         tier = "EXPERT";
+        return "Gold Tier: Outstanding technical knowledge!";
     } else if (score >= 20) {
         tier = "COMPETENT";
+        return "Silver Tier: Solid grasp of foundational concepts.";
     } else {
         tier = "NOVICE";
-    }
-
-    switch (tier) {
-        case "EXPERT":
-            return "Gold Tier: Outstanding technical knowledge!";
-        case "COMPETENT":
-            return "Silver Tier: Solid grasp of foundational concepts.";
-        case "NOVICE":
-            return "Bronze Tier: Keep reviewing lecture slides and labs.";
-        default:
-            return "Completed the quiz.";
-    }
+        "Bronze Tier: Keep reviewing lecture slides and labs.";
+    }return "Completed the quiz.";
 }
 
 // -----------------------------------------------------------------------------
