@@ -22,15 +22,27 @@ const quizMatrix = [
             question: "Who developed the concept of a universal computing machine in 1936?",
             // Multiple options displayed for user to choose from
             options: ["Alan Turing", "Charles Babbage", "Ada Lovelace", "John von Neumann"],
-            // Show where in the Array the correct answer is stored
+            // Shows where in the Array the correct answer is stored, in this case it is position 0 (Alan Turing)
             correctIndex: 0,
             // Shows the points assinged for answering correctly
             points: 10
         },
         {
-
+            //Second question in "Computing History"
+            question: "What storage medium was commonly used for early IBM computer programs?",
+            // Multiple options displayed for user to choose from
+            options: ["Magnetic Tape", "Punched Cards", "Floppy Disk", "Cassette"],
+            // Shows where in the Array the correct answer is stored, this case it is position 1 (Punched Cards)
+            correctIndex: 1,
+            // Shows the points assinged for answering correctly
+            points: 15
         }
+    ],
+   // Row 1: Category "JavaScript Basics"
+   [
+        {
 
-    ]]
+        } 
+]
 ]
 
