@@ -41,7 +41,14 @@ const quizMatrix = [
    // Row 1: Category "JavaScript Basics"
    [
         {
-
+            //First question in "JavaScript Basics"
+            question: "Which keyword defines a variable that CANNOT be reassigned?",
+            // Multiple options displayed for user to choose from
+            options: ["var", "let", "const", "static"],
+            // Shows where in the Array the correct answer is stored, this case it is position 2 (Const)
+            correctIndex: 2,
+            // Shows the points assinged for answering correctly
+            points: 10
         } 
 ]
 ]
