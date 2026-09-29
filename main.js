@@ -181,7 +181,22 @@ function runQuizGame() {
         console.log("Rank:           " + getRankFeedback(p.score));
     }
 
-    printDivider("THANK YOU FOR PLAYING");
+    // Display winner
+let currentWinner = "";
+let highestScore = 0;
+for (let i = 0; i < players.length; i++) {
+    if (players[i].score > highestScore) {
+        highestScore = players[i].score;
+        currentWinner = players[i].name;
+    };
+};
+console.log("\n")
+console.log("=== THE WINNER IS! ===");
+printDivider(currentWinner);
+
+
+
+
 }
 
 // Start program execution
