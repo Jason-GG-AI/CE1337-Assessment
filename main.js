@@ -163,7 +163,7 @@ function runQuizGame() {
                     console.log(">> Incorrect! The correct answer was: " + q.options[q.correctIndex]);
                     currentPlayer.incorrectCount++;
                 }
-            }
+            }leaderboard(players);
         }
     }
 
@@ -181,7 +181,9 @@ function runQuizGame() {
         console.log("Rank:           " + getRankFeedback(p.score));
     }
 
-    // Display winner
+// -------------------------------------------------------------------------
+// Display winner
+// -------------------------------------------------------------------------
 let currentWinner = "";
 let highestScore = 0;
 for (let i = 0; i < players.length; i++) {
@@ -193,10 +195,14 @@ for (let i = 0; i < players.length; i++) {
 console.log("\n")
 console.log("=== THE WINNER IS! ===");
 printDivider(currentWinner);
+};
 
-
-
-
+function leaderboard(players) {
+    console.log("\n");
+    console.log("=== LEADERBOARD ===");
+    for (let i = 0; i < players.length; i++) {
+        console.log("Player", i + 1, "(" + players[i].name + ") score:", players[i].score);
+    }
 }
 
 // Start program execution
