@@ -1,4 +1,36 @@
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // CE1337 Programming Bootcamp - Assessment Project: V2 Blind
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 const prompt = require ("readline-sync");
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// 1D & 2D Arrays and Objects
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// 1D Array used to store quiz category names
+
+const categories = ["Computing History", "JavaScript Basics"];
+
+//2D Array - Rows hold categories, Columns hold questions within the categories
+
+const quizMatrix = [
+    //Row 0: Category "Computing History" (Arrays start from ZERO Not 1) 
+    [
+        {
+            //First question in "Computing History"
+            question: "Who developed the concept of a universal computing machine in 1936?",
+            // Multiple options displayed for user to choose from
+            options: ["Alan Turing", "Charles Babbage", "Ada Lovelace", "John von Neumann"],
+            // Show where in the Array the correct answer is stored
+            correctIndex: 0,
+            // Shows the points assinged for answering correctly
+            points: 10
+        },
+        {
+
+        }
+
+    ]]
+]
 
