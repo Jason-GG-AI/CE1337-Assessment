@@ -11,7 +11,7 @@ const prompt = require("readline-sync");
 // -----------------------------------------------------------------------------
 
 // 1D Array storing category names
-const categories = ["Computing History", "JavaScript Basics"];
+
 
 // 2D Array: Rows represent Categories, Columns represent Questions
 // Each cell contains a question object holding the prompt, options, correct answer, and points
