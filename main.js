@@ -18,4 +18,12 @@ function howManyPlayers(){
     };
 }
 
+// Displaying current Scores
+function leaderboard(){
+    console.log("=== LEADERBOARD ===");
+    for(let i=0;i<numPlayers;i++){
+        console.log("Player ",i+1 ,"score: ", points[i]);
+    };
+};
+
 howManyPlayers();
