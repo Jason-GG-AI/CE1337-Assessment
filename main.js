@@ -100,6 +100,14 @@ function getRankFeedback(score) {
     }return "Completed the quiz.";
 }
 
+function leaderboard(players) {
+    console.log("\n");
+    console.log("=== LEADERBOARD ===");
+    for (let i = 0; i < players.length; i++) {
+        console.log("Player", i + 1, "(" + players[i].name + ") score:", players[i].score);
+    }
+}
+
 // -----------------------------------------------------------------------------
 // 3. MAIN GAME CONTROLLER
 // -----------------------------------------------------------------------------
@@ -189,13 +197,6 @@ console.log("=== THE WINNER IS! ===");
 printDivider(currentWinner);
 };
 
-function leaderboard(players) {
-    console.log("\n");
-    console.log("=== LEADERBOARD ===");
-    for (let i = 0; i < players.length; i++) {
-        console.log("Player", i + 1, "(" + players[i].name + ") score:", players[i].score);
-    }
-}
 
 // Start program execution
 runQuizGame();
