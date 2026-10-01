@@ -40,7 +40,8 @@ const quizMatrix = [
 		}
 	],
     [
-        // Question in category Music
+        // Questions in category Music
+		// Questions obtained from GOOGLE
         {   
             question: "Which country is the birthplace of the musical style known as Reggae?", 
             options: ["Cuba", "Jamaica", "Trinidad and Tobago", "Brazil"], 
@@ -56,6 +57,7 @@ const quizMatrix = [
     ],
     [
         //Questions in category Movies
+		//Questions obrained from GOOGLE
         {   question: "Which pop rock superstar collaborated with composer Hans Zimmer to write the award-winning songs for Disney's 1994 animated feature The Lion King?", 
             options: ["Phil Collins", "Bryan Adams", "Elton John", "Sting"], 
             correctIndex: 2, 
@@ -139,7 +141,7 @@ function runQuizGame() {
 			name = prompt.question("Name cannot be blank. Enter name for Player " + (i + 1) + ": ");
 		}
 
-        // Let players choose category
+        // Let players choose a category
 		const categoryPrompt = "Choose a category:\n" + categories.map((category, index) => "  " + (index + 1) + ") " + category).join("\n") + "\n";
 		const categoryIndex = getValidatedChoice(1, categories.length, categoryPrompt) - 1;
 		players.push(createPlayer(name.trim(), categoryIndex));
