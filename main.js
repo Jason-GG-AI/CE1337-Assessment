@@ -184,6 +184,7 @@ function runQuizGame() {
 // -------------------------------------------------------------------------
 // Display winner
 // -------------------------------------------------------------------------
+
 let currentWinner = "";
 let highestScore = 0;
 for (let i = 0; i < players.length; i++) {
@@ -197,6 +198,17 @@ console.log("=== THE WINNER IS! ===");
 printDivider(currentWinner);
 };
 
+// Rules Function That must be agreed to, to start game
+function Rules(){
+    printDivider("GAME RULES");
+    console.log("1. You must not google answers!", "\n2. You must not copy other players answers", "\n3. The winner is who has the most points at the end" );
+    let agreement = prompt.question("Do you agree to these rules?(Yes or No) ");
+    while(agreement == "No" || agreement == "no"){
+        console.log("You must agree to these rules! ");
+        agreement = prompt.question("Do you agree to these rules?(Yes or No) ");
+    }
+    runQuizGame();
+}
 
 // Start program execution
-runQuizGame();
+Rules();
