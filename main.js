@@ -5,7 +5,7 @@
 const prompt = require("readline-sync");
 
 // 1D array of quiz categories, corresponding to rows in quizMatrix.
-const categories = ["Computing History", "JavaScript Basics", "Music", "Movies"];
+const categories = ["Computing History", "JavaScript Basics", "Computer Hardware", "Computer Networks"];
 
 // Rows represent categories; each question object stores its options and answer.
 const quizMatrix = [
@@ -40,31 +40,31 @@ const quizMatrix = [
 		}
 	],
     [
-        // Questions in category Music
+        // Questions in category Computer Hardware
 		// Questions obtained from GOOGLE
         {   
-            question: "Which country is the birthplace of the musical style known as Reggae?", 
-            options: ["Cuba", "Jamaica", "Trinidad and Tobago", "Brazil"], 
-            correctIndex: 1, 
+            question: "Which hardware component is commonly referred to as the 'brain' of the computer because it performs most of the processing calculations and instructions?", 
+            options: ["GPU", "RAM", "CPU", "Motherboard"], 
+            correctIndex: 2, 
             points: 10 
         },
         { 
-            question: "Which pop star's real name is Stefani Joanne Angelina Germanotta?", 
-            options: ["Lady Gaga", "Katy Perry", "Rihanna", "Ariana Grande"], 
-            correctIndex: 0, 
+            question: "What is the primary operational difference between Random Access Memory (RAM) and a Hard Disk Drive (HDD) or Solid State Drive (SSD)?", 
+            options: ["RAM is used only for permanently storing personal files, whereas drives are used only for running applications.", "RAM is fast, temporary, volatile memory for active tasks, whereas a drive is slower, permanent, non-volatile storage.", "There is no difference; RAM and drives are interchangeable terms for the same hardware component.", "RAM is slower than an SSD and retains data even when the computer is turned off, whereas an SSD is faster but loses data when powered down."], 
+            correctIndex: 1, 
             points: 15 
         }
     ],
     [
-        //Questions in category Movies
-		//Questions obrained from GOOGLE
-        {   question: "Which pop rock superstar collaborated with composer Hans Zimmer to write the award-winning songs for Disney's 1994 animated feature The Lion King?", 
-            options: ["Phil Collins", "Bryan Adams", "Elton John", "Sting"], 
-            correctIndex: 2, 
+        //Questions in category Computer Networks
+		//Questions obtained from GOOGLE
+        {   question: "What is the fundamental purpose of an IP (Internet Protocol) address on a network?", 
+            options: ["A. It uniquely identifies a device connected to a network so that data can be sent to and from it.", "It acts as the physical hardware identification burned into a network card during manufacturing.", "It encrypts all internet traffic to prevent hackers from intercepting data.", "It measures the maximum physical download speed of an internet connection."], 
+            correctIndex: 0, 
             points: 10 
         },
-        {   question: "Which legendary composer wrote the iconic, five-note alien communication theme for the 1977 film Close Encounters of the Third Kind?", 
-            options: ["Hans Zimmer", "John Williams", "Danny Elfman", "Jerry Goldsmith"], 
+        {   question: "What is the primary role of a router in a computer network?", 
+            options: ["A. To display web pages inside a browser interface.", "To forward data packets between different networks.", "C. To store and manage files on a local network.", "To provide power to network devices."], 
             correctIndex: 1, 
             points: 15 
         }
@@ -141,7 +141,7 @@ function runQuizGame() {
 			name = prompt.question("Name cannot be blank. Enter name for Player " + (i + 1) + ": ");
 		}
 
-        // Let players choose a category
+        // Allows player's to choose a category
 		const categoryPrompt = "Choose a category:\n" + categories.map((category, index) => "  " + (index + 1) + ") " + category).join("\n") + "\n";
 		const categoryIndex = getValidatedChoice(1, categories.length, categoryPrompt) - 1;
 		players.push(createPlayer(name.trim(), categoryIndex));
