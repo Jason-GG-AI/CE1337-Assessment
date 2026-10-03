@@ -204,11 +204,11 @@ printDivider(currentWinner);
 function Rules(){
     printDivider("GAME RULES");
     console.log("1. You must not google answers!", "\n2. You must not copy other players answers", "\n3. The winner is who has the most points at the end" );
-    let agreement = prompt.question("Do you agree to these rules?(Yes or No) ");
-    while(agreement == "No" || agreement == "no"){
-        console.log("You must agree to these rules! ");
-        agreement = prompt.question("Do you agree to these rules?(Yes or No) ");
-    }
+    let agreement = prompt.question("Do you agree to these rules?\n1.Yes\n2.No\nPlease select an option:" );
+    while(agreement != 1){
+        console.log("You must agree to the rules! Try again");
+        agreement = prompt.question("Do you agree to these rules?\n1.Yes\n2.No\nPlease select an option: ");
+    };
     runQuizGame();
 }
 
