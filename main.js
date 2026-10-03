@@ -58,7 +58,10 @@ function createPlayer(playerName) {
         name: playerName,
         score: 0,
         correctCount: 0,
-        incorrectCount: 0
+        incorrectCount: 0,
+        streak: 0,
+        highestStreak: 0,
+        streakScore: 0
     };
 }
 
@@ -108,6 +111,19 @@ function leaderboard(players) {
         console.log("Player", i + 1, "(" + players[i].name + ") score:", players[i].score);
     }
 }
+
+// Streak function to add up and display the number of consecutive correct answers - Craig
+function playerStreak(player){
+    if(player.streak > 1){
+        console.log(player.name + " is on a streak of " + player.streak);
+
+    }
+    if(player.streak > player.highestStreak){
+        player.highestStreak = player.streak;
+    }
+    player.streakScore = player.highestStreak * 5;
+}
+
 
 // -----------------------------------------------------------------------------
 // 3. MAIN GAME CONTROLLER
@@ -160,9 +176,12 @@ function runQuizGame() {
                     console.log(">> Correct! You earned " + q.points + " points.");
                     currentPlayer.score += q.points;
                     currentPlayer.correctCount++;
+                    currentPlayer.streak++;
+                    playerStreak(currentPlayer);
                 } else {
                     console.log(">> Incorrect! The correct answer was: " + q.options[q.correctIndex]);
                     currentPlayer.incorrectCount++;
+                    currentPlayer.streak = 0;
                 }
             }leaderboard(players);
         }
@@ -180,6 +199,10 @@ function runQuizGame() {
         console.log("Final Score:    " + p.score + " points");
         console.log("Correct/Wrong:  " + p.correctCount + " correct, " + p.incorrectCount + " incorrect");
         console.log("Rank:           " + getRankFeedback(p.score));
+        console.log("Current Streak: " + p.streak);
+        console.log("Highest Streak: " + p.highestStreak);
+        console.log("Streak Bonus: " + p.streakScore + " points");
+        console.log("Total Score: "  + (p.score + p.streakScore) + " points");
     }
 
 // -------------------------------------------------------------------------
