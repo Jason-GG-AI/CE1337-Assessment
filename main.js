@@ -100,7 +100,8 @@ function getRankFeedback(score) {
     }return "Completed the quiz.";
 }
 
-function leaderboard(players) {
+// Leaderboard function to be displayed after every question - Ethan
+function leaderboard(players) { 
     console.log("\n");
     console.log("=== LEADERBOARD ===");
     for (let i = 0; i < players.length; i++) {
@@ -182,7 +183,7 @@ function runQuizGame() {
     }
 
 // -------------------------------------------------------------------------
-// Display winner
+// Display winner - Ethan
 // -------------------------------------------------------------------------
 
 let currentWinner = "";
@@ -197,8 +198,9 @@ console.log("\n")
 console.log("=== THE WINNER IS! ===");
 printDivider(currentWinner);
 };
-
-// Rules Function That must be agreed to, to start game
+// -------------------------------------------------------------------------
+// Rules Function That must be agreed to, to start game - Ethan
+// -------------------------------------------------------------------------
 function Rules(){
     printDivider("GAME RULES");
     console.log("1. You must not google answers!", "\n2. You must not copy other players answers", "\n3. The winner is who has the most points at the end" );
